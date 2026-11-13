@@ -35,7 +35,7 @@ Download or clone this repository and open `index.html` in any web browser. No i
 
 ## Live website
 
-Add the GitHub Pages link here after publishing: `https://YOUR-USERNAME.github.io/Krushnadev_Chauhan_268405_Portfolio/`
+Add the GitHub Pages link here after publishing: `https://krushnadevchauhan04-lab.github.io/Krushnadev_Chauhan_268405_Portfolio/`
 
 ## Author
 
