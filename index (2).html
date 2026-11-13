@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Krushnadev Chauhan, B.Tech CSE (AIML) student learning to build software.">
+  <title>Krushnadev Chauhan | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Header and navigation ===== -->
+  <header class="site-header">
+    <a class="brand" href="#home">Krushnadev Chauhan</a>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-buttons">
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">Dark</button>
+      <button id="menu-toggle" class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Home ===== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Hi, I'm Krushnadev Chauhan.</h1>
+        <p class="lead">I'm a B.Tech Computer Science student learning to build software one project at a time.</p>
+        <p class="hero-buttons">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </p>
+      </div>
+
+      <figure class="code-card">
+        <figcaption>about_me.js</figcaption>
+<pre><code>const krushnadev = {
+  course: "B.Tech CSE (AIML)",
+  learning: ["Python", "Web"],
+  goal: "Software developer",
+  status: "Building my first projects"
+};</code></pre>
+      </figure>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <h2>About me</h2>
+      <p>I study Computer Science and Engineering with a specialisation in Artificial Intelligence and Machine Learning. I am new to programming, so I am learning step by step: Python first, and now web development.</p>
+      <p>This portfolio is one of my first web projects. I wrote the HTML, CSS and JavaScript myself to practise what I am learning. My goal is to work as a software developer.</p>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <p>I am at the beginner level in all of these, and I am improving every week.</p>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Web development</h3>
+          <ul>
+            <li>HTML: page structure, forms</li>
+            <li>CSS: selectors, layout, media queries</li>
+            <li>JavaScript: events, form checking</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python: variables, conditions, loops</li>
+            <li>Problem solving with small games</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <ul>
+            <li>Git and GitHub: basics</li>
+            <li>Browser developer tools: basics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>Rock Paper Scissors Showdown</h3>
+        <p>A text game in Python. You play matches against the computer, and the first to win 3 rounds wins. The game checks wrong inputs, keeps score, and shows a final result with a rank.</p>
+        <p class="tags"><span>Python</span> <span>Loops</span> <span>Conditions</span> <span>Random module</span></p>
+      </article>
+
+      <article class="project">
+        <h3>This portfolio website</h3>
+        <p>My personal website, built without a template. It has a dark mode button, a menu for small screens, and a contact form that checks what you type before it is submitted.</p>
+        <p class="tags"><span>HTML</span> <span>CSS</span> <span>JavaScript</span> <span>GitHub</span></p>
+      </article>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Write a message using the form below.</p>
+
+      <form id="contact-form" class="form" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name">
+          <p class="error" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email">
+          <p class="error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write at least 10 characters"></textarea>
+          <p class="error" id="message-error" aria-live="polite"></p>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p id="form-success" class="success" aria-live="polite"></p>
+        <p class="note">This is a practice form. It checks your input but does not send emails.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Krushnadev Chauhan. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

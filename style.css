@@ -1,0 +1,289 @@
+/* ------------------------------------------------------------
+   Portfolio of Krushnadev Chauhan - style.css
+   ------------------------------------------------------------ */
+
+/* ---------- Colours (light theme is the default) ---------- */
+:root {
+  --paper: #f3f6fa;
+  --surface: #ffffff;
+  --ink: #12203a;
+  --muted: #4b5a75;
+  --line: #d3dbe8;
+  --accent: #f2b705;       /* marigold */
+  --accent-ink: #12203a;   /* text that sits on the accent colour */
+  --link: #1f4fbf;
+  --error: #b3261e;
+  --success: #1b7a3d;
+  --code-bg: #12203a;
+  --code-text: #e8edf6;
+}
+
+/* ---------- Dark theme (switched by script.js) ---------- */
+html[data-theme="dark"] {
+  --paper: #0e1729;
+  --surface: #16213a;
+  --ink: #e8edf6;
+  --muted: #a7b4cc;
+  --line: #2b3a5a;
+  --link: #8fb4ff;
+  --error: #ff8a80;
+  --success: #6fdc8c;
+  --code-bg: #0a1121;
+}
+
+/* ---------- Element selectors: basic page styles ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.2rem; }
+
+p { margin: 0 0 1em; max-width: 65ch; }
+
+a { color: var(--link); }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Header and navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav { display: flex; gap: 1.4rem; }
+
+.nav a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+/* Hover effect for navigation links */
+.nav a:hover { border-bottom-color: var(--accent); }
+
+.header-buttons { display: flex; gap: 0.5rem; }
+
+.icon-btn {
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+.icon-btn:hover { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+.menu-btn { display: none; }   /* only shown on small screens */
+
+/* ---------- Hero (Home) ---------- */
+#home.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+}
+
+.lead { font-size: 1.25rem; color: var(--muted); }
+
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink);
+  background: transparent;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  padding: 0.6rem 1.3rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-2px); background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+
+/* ---------- Code card in the hero ---------- */
+.code-card {
+  margin: 0;
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.code-card figcaption {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85rem;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 3px solid var(--accent);
+}
+
+.code-card pre {
+  margin: 0;
+  padding: 1.2rem 1rem;
+  overflow-x: auto;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.skill-group h3 { padding-bottom: 0.4rem; border-bottom: 3px solid var(--accent); display: inline-block; }
+
+.skill-group ul { margin: 0.8rem 0 0; padding-left: 1.2rem; }
+.skill-group li { margin-bottom: 0.4rem; }
+
+/* ---------- Projects ---------- */
+.project {
+  padding: 1.5rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  border-left: 4px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover effect for projects */
+.project:hover { background: var(--surface); border-left-color: var(--accent); }
+
+.tags { margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.tags span {
+  font-size: 0.85rem;
+  padding: 0.1rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  color: var(--muted);
+}
+
+/* ---------- Contact form ---------- */
+.form { max-width: 560px; margin-top: 1.5rem; }
+
+.field { margin-bottom: 1.2rem; }
+
+label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+
+input, textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+}
+
+input:hover, textarea:hover { border-color: var(--muted); }
+input:focus, textarea:focus { border-color: var(--accent); }
+
+/* Classes added by script.js when a field has a problem */
+.invalid { border-color: var(--error); }
+.error { color: var(--error); font-size: 0.95rem; margin: 0.3rem 0 0; min-height: 1.4em; }
+.success { color: var(--success); font-weight: 600; margin-top: 1rem; }
+.note { color: var(--muted); font-size: 0.9rem; margin-top: 1rem; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.site-footer p { margin: 0 auto; }
+
+/* ---------- Responsive layout (media queries) ---------- */
+@media (max-width: 860px) {
+  #home.hero { grid-template-columns: 1fr; padding-top: 3rem; gap: 2rem; }
+  .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+@media (max-width: 720px) {
+  .menu-btn { display: inline-block; }
+
+  /* Menu is hidden on phones until the Menu button is pressed */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1.5rem 1rem;
+  }
+
+  .nav.open { display: flex; }
+  .nav a { padding: 0.7rem 0; }
+}
+
+/* ---------- Respect people who prefer less motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .project { transition: none; }
+}
