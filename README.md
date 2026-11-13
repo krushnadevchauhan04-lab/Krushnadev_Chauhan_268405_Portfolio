@@ -33,9 +33,6 @@ It tells visitors who I am, what I am learning, and shows my first projects.
 
 Download or clone this repository and open `index.html` in any web browser. No installation is needed.
 
-## Live website
-
-Add the GitHub Pages link here after publishing: `https://krushnadevchauhan04-lab.github.io/Krushnadev_Chauhan_268405_Portfolio/`
 
 ## Author
 
